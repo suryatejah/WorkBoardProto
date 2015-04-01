@@ -1,0 +1,53 @@
+<nav class="navbar navbar-default" >
+	<div class="container-fluid" id="navigation-AOE">
+		<!--navbar header -->
+		<div class="navbar-header ">
+			<div class="row ">
+				<!-- Adtran and AOE logos -->
+				<div class="col-md-5 nav-header">
+					<img src="images/logos/AdtranLogo.png" class="adtranLogo">
+					<img src="images/logos/AOELogo.png" class=" aoeLogo">
+				</div>
+				<!-- Search Box-->
+				<div  class="col-md-4 navbar-form" role="search">
+					<div class="right-inner-addon input-group nav-search">
+						<input type="search" class="form-control " placeholder="Search">
+					</div>
+				</div>
+				<!-- alarm notifications Icon -->
+				<div  class="col-md-1  nav-header nav-border ">
+					<img ng-click="open('sm')" src="images/icons/Alarms.png" class="alarmNotifications">
+					<span class="badge notification-position">4</span>
+				</div>
+				<!-- AOE user details -->
+				<div class="col-md-2   nav-header aoe-user">
+					<!-- Single button -->
+					<div dropdown="" is-open="status.isopen" class="">
+						<h4 class="dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false"> Administrator <span class="caret"></span></h4>
+						<!-- dropdown menu -->
+						<ul class="dropdown-menu pull-right" role="menu">
+							<li>
+								<span>Licenses/Keys</span>
+							</li>
+							<li>
+								<span>AOE Clients</span>
+							</li>
+							<li>
+								<span>Settings</span>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<span>Action log</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- App library Icon-->
+				<div   class="col-md-1 pull-right nav-header nav-border">
+					<img ng-click="open()" src="images/icons/AppLibraryIcon.png" class="alarmNotifications">
+				</div>
+			</div>
+		</div>
+
+	</div>
+</nav>

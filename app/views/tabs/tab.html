@@ -1,0 +1,23 @@
+<!-- tabset directive in "ui.bootstrap" module is acting as tabs container -->
+<tabset >
+	<!-- using tab directive, it will provide tab structure -->
+	<tab ng-repeat="workboard in workboards" class="tab" active="workboard.active">
+		<!-- tab-heading directive will provide header part in the tab-->
+		<tab-heading  >
+			{{workboard.title}}
+			<!-- tab close icon -->
+			
+				<span class="badge close-tab-icon" ng-click="removeTab($index,$event)"  ng-if="workboard.id!=1" > 
+					<img src="images/icons/icon-close-20.png" > 
+				</span>
+			
+		</tab-heading>
+	</tab>
+	<!-- Here onselect it will add new workboard to the tabset-->
+	<tab select="addWorkspace()" class="add-tab">
+		<!-- tab add icon -->
+		<tab-heading>
+			<img src="/images/icons/AddButton.png" class="add-tab-icon-plus"/>
+		</tab-heading>
+	</tab>
+</tabset>

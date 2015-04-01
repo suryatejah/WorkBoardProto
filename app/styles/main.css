@@ -1,0 +1,231 @@
+@font-face {
+	font-family: 'Agency FB';
+	src: url('/images/global/AGENCYR.TTF');
+}
+.btn-gray {
+	color: #E4E6E9;
+	background-color: #777783;
+	border-color: #777783;
+}
+#navigation-AOE {
+	height: 7.5%;
+}
+#tabpanel-AOE {
+	height: 88%;
+}
+#footer-AOE {
+	height: 2.5%;
+	position: absolute;
+}
+
+.right-inner-addon input {
+
+	background-image: url('/images/icons/SearchIcon-30.png');
+	background-repeat: no-repeat;
+	background-position: 98% 50%;
+	background-size: 20px;
+	outline: 0;
+}
+
+.add-tab a {
+	background-color: #E4E6E9 !important;
+	height: 20px;
+}
+.tab > a {
+	background-color: #777783 !important;
+	padding: 10px 60px 10px 10px !important;
+}
+.tab-panel {
+	background-color: #777783;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.notification-position {
+	background-color: #ff0000;
+	right: 9px;
+	top: 14px;
+	z-index: 1;
+	position: absolute;
+}
+.grid {
+	align: center;
+	height: 300px;
+	width: auto;
+	border: 1px solid #fff;
+	color: #fff;
+}
+.close-tab-icon {
+	right: 10px;
+	top: 10px;
+	z-index: 1;
+	position: absolute;
+}
+.close-tab-icon img {
+	height: 10px;
+	width: 10px;
+	cursor: pointer;
+	background-color: #777783;
+}
+.add-tab-icon-plus {
+	height: 20px;
+	width: 20px;
+}
+.nav > li {
+	color: #8CC63E;
+}
+.nav > li > a {
+	color: #ffffff;
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	background-color: #777783;
+}
+
+.nav > li.disabled > a {
+	color: #777;
+}
+.nav-tabs {
+	background-color: #E4E6E9;
+	border: none;
+}
+.nav-tabs > li {
+	margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+	border: none;
+	border-radius: 0px;
+	margin-right: 2px;
+	line-height: 1.42857143;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+	color: #8CC63E;
+	cursor: default;
+	background-color: #777783;
+	border: 1px solid #777783;
+	border-bottom-color: transparent;
+}
+
+.dropdown-menu > li > span {
+	display: block;
+	cursor: pointer;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: 400;
+	line-height: 1.42857143;
+	color: #333;
+	white-space: nowrap;
+}
+
+.dropdown-menu > li > span:focus, .dropdown-menu > li > span:hover {
+	color: #262626;
+	text-decoration: none;
+	background-color: #8CC63E;
+}
+
+.dropdown-menu > .active > li > span, .dropdown-menu > .active > li > span:focus, .dropdown-menu > .active > li > span:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #337ab7;
+	outline: 0;
+}
+.nav-search {
+	width: 100% !important;
+}
+.navbar-form .input-group > .form-control {
+	width: 80%;
+	left: 60px;
+}
+.nav-header {
+	padding: 5px;
+}
+.nav-border {
+	border: 1px solid #777783;
+	border-top-style: none;
+	width: 5.33333333% !important;
+	border-bottom-style: none;
+	text-align: center;
+	color: #777783;
+	height: 100%;
+}
+.aoe-user {
+	text-align: right;
+	color: #777783;
+	width: 13.66666667% !important;
+}
+.aoeLogo {
+	margin: 5px 0 0 0;
+	padding: 10px 0 10px 0;
+	height: 30px;
+}
+.alarmNotifications {
+	height: 40px;
+	padding: 5px 15px 5px 5px;
+}
+.adtranLogo {
+	opacity: 0.9;
+	margin: 5px 0 5px 0;
+	height: 30px;
+}
+.col-md-push-left-1 {
+	left: 8.99333333%;
+}
+.col-md-push-left-2 {
+	left: 17.99333333%;
+}
+html, body {
+	height: 100%;
+}
+.nav, .pagination, .carousel, .panel-title a {
+	cursor: pointer;
+}
+html {
+	font-family: 'Agency FB';
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	font-family: "Agency FB";
+	background-color: #777783;
+}
+.navbar-default {
+	background-color: #E4E6E9;
+	border-color: #777783;
+}
+.navbar {
+	min-height: 50px;
+	position: relative;
+	border: 1px solid #777783;
+	border-left-style: none;
+	border-top-style: none;
+	border-right-style: none;
+	margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+	.navbar {
+		border-radius: 0px;
+	}
+}
+@media (min-width: 768px) {
+	.navbar-header {
+		float: none;
+	}
+}
+@media (min-width: 768px) {
+	.navbar-form {
+		width: 31%;
+	}
+}
+@media (min-width: 768px) {
+	.modal-dialog {
+		width: 400px;
+		margin: 30px auto;
+	}
+	.modal-content {
+		-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	}
+	.modal-sm {
+		width: 300px;
+	}
+}
