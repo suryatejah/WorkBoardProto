@@ -6,11 +6,13 @@
 		<tab-heading  >
 			{{workboard.title}}
 			<!-- tab close icon -->
-
-			<span class="badge close-tab-icon" ng-click="removeTab($index,$event)"  ng-if="workboard.id!=1" > <img src="images/icons/icon-close-20.png" > </span>
-
+			
+				<span class="badge close-tab-icon" ng-click="removeTab($index,$event)"  ng-if="workboard.id!=1" > 
+					<img src="images/icons/icon-close-20.png" > 
+				</span>
+			
 		</tab-heading>
-		<div>
+		<div class="dashboard-content">
 			<adf-dashboard name="{{workbaord.name}}" collapsible="{{workboard.collapsible}}" structure="6-6" adf-model="workboard.model" />
 		</div>
 	</tab>
@@ -21,4 +23,12 @@
 			<img src="/images/icons/AddButton.png" class="add-tab-icon-plus"/>
 		</tab-heading>
 	</tab>
-</tabset>
+</tabset><!---
+	
+	<button class="btn">
+		<i class="glyphicon glyphicon-pushpin"></i>
+	</button>
+
+	
+	
+	 -->

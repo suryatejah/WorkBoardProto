@@ -4,31 +4,35 @@
  * @ngdoc function
  * @name dashBoardSampleApp.controller:AboutCtrl
  * @description
- * # TabCtrl
- * Controller of the dashBoardSampleApp
+ * # tabCtrl
+ * tabpanel is a module, Which is depend on 'adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','structures' modules
+ * 
  */
 (function() {
 	var app = angular.module('tabpanel', ['adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','structures']);
+	/**
+	 * tabPanel is directive, which is restricted to element type
+	 * we are providing tabpanel html content in the /views/tabs/tab.html
+	 * tabpenel controller alias as 'tabCtrl'
+	 */
 	app.directive('tabPanel', function() {
-		return {
+		return { 
 			restrict : 'E',
 			templateUrl : '/views/tabs/tab.html',
 			controller : function($scope, localStorageService) {
-				
-
-				/*
-				 Dashboard components declaration part
+				/**
+				 *Dashboard components declaration part
 				 */
 				var name = "aoe_dashboard";
 				var model = localStorageService.get(name);
 				if (!model) {
 					// set default model for demo purposes
-					model = {
+				model = {
 						title : "",
 						structure : "6-6",
 						rows : [{
 							columns : [{
-								styleClass : "col-md-6",
+								styleClass : "col-sm-6",
 								widgets : [{
 									type : "markdown",
 									config : {
@@ -47,15 +51,9 @@
 										content : "No Alerts Found"
 									},
 									title : "Capacity Monitor Alerts"
-								}, {
-									type : "markdown",
-									config : {
-										content : "No Alerts Found"
-									},
-									title : "Service Monitor Alerts"
 								}]
 							}, {
-								styleClass : "col-md-6",
+								styleClass : "col-sm-6",
 								widgets : [{
 									type : "markdown",
 									config : {
@@ -69,6 +67,12 @@
 									},
 									reload : true,
 									title : "Dynamic updates"
+								},{
+									type : "markdown",
+									config : {
+										content : "No Alerts Found"
+									},
+									title : "Service Monitor Alerts"
 								}]
 							}]
 						}]
@@ -87,7 +91,7 @@
 				 End of Dashboard components declaration part
 				*/
 				$scope.workboards = [{
-					title : 'Workboard',
+					title : 'Workboard-1',
 					id : '1',
 					active : true,
 					model:model,
@@ -107,7 +111,7 @@
 					$scope.name = "Workboard"+id+"_dashboard";
 					$scope.workboards.push({
 						id : id,
-						title : "Workboard"+id,
+						title : "Workboard-"+id,
 						active : true
 					});
 				};			

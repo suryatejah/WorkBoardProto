@@ -41,9 +41,9 @@
 
         function collapse() {
           element
-            // IMPORTANT: The height must be set before adding "collapsing" class.
-            // Otherwise, the browser attempts to animate from height 0 (in
-            // collapsing class) to the given height here.
+            // IMPORTANT: The width must be set before adding "collapsing" class.
+            // Otherwise, the browser attempts to animate from width 0 (in
+            // collapsing class) to the given width here.
             .css({width: element[0].scrollWidth + 'px'})
             // initially all panel collapse have the collapse class, this removal
             // prevents the animation from jumping to collapsed state
