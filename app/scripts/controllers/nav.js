@@ -46,27 +46,6 @@
 	// Please note that $modalInstance represents a modal window (instance) dependency.
 	// It is not the same as the $modal service used above.
 	app.controller('ModalInstanceCtrl', function($scope,$modalInstance, items) {
-        	$scope.details = [{
-					firstname : "Surya Teja",
-					lastname : "Hanumandla"
-				}, {
-					firstname : "Ravi",
-					lastname : "Methuku"
-				}, {
-					firstname : "Saikiran",
-					lastname : "Gaddam"
-				}];
-				$scope.gridOps = {
-					"data" : 'details',
-					multiSelect : false,
-					columnDefs : [{
-						field : "firstname",
-						displayName : "First Name"
-					}, {
-						field : "lastname",
-						displayName : "Last Name"
-					}]
-				};
 		$scope.items = items;
 		$scope.selected = {
 			item : $scope.items[0]

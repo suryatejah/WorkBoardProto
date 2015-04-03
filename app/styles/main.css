@@ -52,9 +52,9 @@
 	background-color: #E4E6E9;
 }
 .right-content {
-	float: right;
 	background-color: #777783;
 	height: 100%;
+	overflow: auto;
 }
 .btn-gray {
 	color: #E4E6E9;
@@ -111,7 +111,7 @@
 }
 .grid {
 	align: center;
-	height: 300px;
+	height: 150px;
 	width: auto;
 	border: 1px solid #fff;
 	color: #fff;
@@ -290,7 +290,8 @@ body {
 }
 
 .panel {
-	margin-left: 5px;
+	margin: 5px;
+	overflow: auto;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;

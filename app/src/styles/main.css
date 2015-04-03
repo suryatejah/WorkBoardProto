@@ -51,6 +51,7 @@ pre.edit {
 
 .widget h3 a {
   text-decoration: none;
+  overflow: scroll;
 }
 
 .dashboard-container h1 a {
@@ -68,4 +69,7 @@ pre.edit {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+.grid{
+	overflow: auto;
 }

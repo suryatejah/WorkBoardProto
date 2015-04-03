@@ -9,7 +9,7 @@
  * 
  */
 (function() {
-	var app = angular.module('tabpanel', ['adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','structures']);
+	var app = angular.module('tabpanel', ['adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','dashBoardSampleApp.widgets.chart','dashBoardSampleApp.widgets.grid','structures']);
 	/**
 	 * tabPanel is directive, which is restricted to element type
 	 * we are providing tabpanel html content in the /views/tabs/tab.html
@@ -32,47 +32,22 @@
 						structure : "6-6",
 						rows : [{
 							columns : [{
-								styleClass : "col-sm-6",
+								styleClass : "col-md-6",
 								widgets : [{
-									type : "markdown",
-									config : {
-										content : "No Alarms Found"
-									},
-									title : "Alarms"
-								}, {
-									type : "markdown",
-									config : {
-										content : "No Tasks Scheduled"
-									},
+									type : "chart",
 									title : "Recently Scheduled Tasks"
+								}]
+							}, {
+								styleClass : "col-md-6",
+								widgets : [{
+									type : "grid",
+									title : "Historical Alarms"
 								}, {
 									type : "markdown",
 									config : {
 										content : "No Alerts Found"
 									},
 									title : "Capacity Monitor Alerts"
-								}]
-							}, {
-								styleClass : "col-sm-6",
-								widgets : [{
-									type : "markdown",
-									config : {
-										content : "No Alarms Found"
-									},
-									title : "Historical Alarms"
-								}, {
-									type : "markdown",
-									config : {
-										content : "No updates"
-									},
-									reload : true,
-									title : "Dynamic updates"
-								},{
-									type : "markdown",
-									config : {
-										content : "No Alerts Found"
-									},
-									title : "Service Monitor Alerts"
 								}]
 							}]
 						}]

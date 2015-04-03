@@ -36,6 +36,10 @@ module.exports = function(config) {
       'bower_components/json3/lib/json3.min.js',
       'bower_components/showdown/src/showdown.js',
       'bower_components/angular-markdown-directive/markdown.js',
+      'bower_components/highcharts-ng/dist/highcharts-ng.js',
+      'bower_components/highcharts/highcharts.js',
+      'bower_components/highcharts/highcharts-more.js',
+      'bower_components/highcharts/modules/exporting.js',
       // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
