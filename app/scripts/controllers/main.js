@@ -8,7 +8,7 @@
  * Controller of the dashBoardSampleApp
  */
 (function() {
-	var app = angular.module('dashBoardSampleApp',['ui.bootstrap','ui.grid','ngGrid','tabpanel','navigation']);
+	var app = angular.module('dashBoardSampleApp',['ui.bootstrap','ui.grid','ngGrid','tabpanel','navigation','adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','structures']);
 	app.controller('MainCtrl', ['$scope',function($scope) {
      $scope.devicesListCollapsed=false;
 	}]);

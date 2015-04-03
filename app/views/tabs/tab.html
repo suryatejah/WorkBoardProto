@@ -6,12 +6,13 @@
 		<tab-heading  >
 			{{workboard.title}}
 			<!-- tab close icon -->
-			
-				<span class="badge close-tab-icon" ng-click="removeTab($index,$event)"  ng-if="workboard.id!=1" > 
-					<img src="images/icons/icon-close-20.png" > 
-				</span>
-			
+
+			<span class="badge close-tab-icon" ng-click="removeTab($index,$event)"  ng-if="workboard.id!=1" > <img src="images/icons/icon-close-20.png" > </span>
+
 		</tab-heading>
+		<div>
+			<adf-dashboard name="{{workbaord.name}}" collapsible="{{workboard.collapsible}}" structure="6-6" adf-model="workboard.model" />
+		</div>
 	</tab>
 	<!-- Here onselect it will add new workboard to the tabset-->
 	<tab select="addWorkspace()" class="add-tab">
