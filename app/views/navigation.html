@@ -16,35 +16,54 @@
 				</div>
 				<!-- alarm notifications Icon -->
 				<div  class="col-md-1  nav-header nav-border ">
-					<img ng-click="open('sm')" src="images/icons/Alarms.png" class="alarmNotifications">
+					<img ng-click="open('lg')" src="images/icons/Alarms.png" class="alarmNotifications">
 					<span class="badge notification-position">4</span>
 				</div>
 				<!-- AOE user details -->
-				<div class="col-md-2   nav-header aoe-user">
+				<div class="col-md-2   nav-header  aoe-user">
 					<!-- Single button -->
 					<div dropdown="" is-open="status.isopen" class="">
-						<h4 class="dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false"> Administrator <span class="caret"></span></h4>
+						<div class="dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
+							<div class="col-md-10">
+								<h4 > Administrator</h4>
+							</div>
+							<div class="col-md-2 icon-down">
+								<i class=" glyphicon glyphicon-play"></i>
+							</div>
+						</div>
 						<!-- dropdown menu -->
-						<ul class="dropdown-menu pull-right" role="menu">
+						<ul class="dropdown-menu pull-right" >
 							<li>
-								<span>Licenses/Keys</span>
-							</li>
-							<li>
-								<span>AOE Clients</span>
-							</li>
-							<li>
-								<span>Settings</span>
+								<span>Help</span>
 							</li>
 							<li class="divider"></li>
 							<li>
+								<span>Licenses/Keys</span>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<span>AOE Clients</span>
+							</li>
+							<li class="divider"></li>
+
+							<li>
 								<span>Action log</span>
 							</li>
+							<li class="divider"></li>
+							<li>
+								<span>About AOE</span>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<span>Logout</span>
+							</li>
+
 						</ul>
 					</div>
 				</div>
 				<!-- App library Icon-->
 				<div   class="col-md-1 pull-right nav-header nav-border">
-					<img ng-click="open()" src="images/icons/AppLibraryIcon.png" class="alarmNotifications">
+					<img ng-click="open('sm')" src="images/icons/AppLibraryIcon.png" class="alarmNotifications">
 				</div>
 			</div>
 		</div>
