@@ -557,45 +557,54 @@ body {
   padding: 0px;
   width: 110px;
 }
+
 .applist-row > .col-md-4 > .row > .col-md-4:hover {
-	background-color: #8cc63e
+  background-color: #8cc63e;
 }
+
 .applist-row > .col-md-4 > .row > .col-md-4 {
   padding: 10px 0px 10px 0px;
   background-color: #777783;
   height: 100%;
 }
-.applist-row > .col-md-4 > .row > .col-md-8{
-	padding:0px;
+
+.applist-row > .col-md-4 > .row > .col-md-8 {
+  padding: 0px;
 }
-.applist-row > .col-md-4 > .row > .col-md-8 > p{
-	margin: 0px;
-	float: left;
+
+.applist-row > .col-md-4 > .row > .col-md-8 > p {
+  margin: 0px;
+  float: left;
   padding-left: 5px;
 }
-.applist-row > .col-md-4 > .row > .col-md-8 > p:first-of-type{
-	font-weight: bold;
-	color:#777783;
+
+.applist-row > .col-md-4 > .row > .col-md-8 > p:first-of-type {
+  font-weight: bold;
+  color: #777783;
 }
-.applist-row > .col-md-4 > .row > .col-md-8 > p:last-of-type{
-	color:#777783;
-	font-size:11px;
+
+.applist-row > .col-md-4 > .row > .col-md-8 > p:last-of-type {
+  color: #777783;
+  font-size: 11px;
 }
-.add-app-icon{
-	float:right;
-	margin-bottom:0px;
-	padding:5px 5px 5px 0px;
-	color:#777783;
+
+.add-app-icon {
+  float: right;
+  margin-bottom: 0px;
+  padding: 5px 5px 5px 0px;
+  color: #777783;
 }
-.add-app-icon:hover{
-	color:#8cc63e;
+
+.add-app-icon:hover {
+  color: #8cc63e;
 }
-.app-notification-badge{
+
+.app-notification-badge {
   background-color: #ff0000;
-  font-family:"Arial Black";
+  font-family: "Arial Black";
   right: -8px;
   top: -8px;
   z-index: 1;
   position: absolute;
-  font-size:14px;
+  font-size: 14px;
 }
