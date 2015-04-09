@@ -105,7 +105,7 @@
 			link : function(scope, elements, attrs) {
 
 			}
-		}
+		};
 
 	});
 
