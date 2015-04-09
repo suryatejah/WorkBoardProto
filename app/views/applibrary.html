@@ -1,45 +1,204 @@
-<div class="modal-header">
-
-	<h3 class="modal-title">App library</h3>
-</div>
 <div class="modal-body">
-<section class="call-out">
-	<tabset justified="true">
-		<tab class="tab" heading="Applications" >
-			
-				<div class="row">
-				<div class="col-md-3">
-					<button class="btn btn-sm btn-gray">
+	<div class="applibrary-header">
+		<p>
+			Application Library
+		</p>
+		<div class="applibrary-search">
+			<div class="col-md-1 ">
+				<i class="icon-filter glyphicon glyphicon-play"></i>
+			</div>
+			<div class="col-md-11 right-inner-addon ">
+				<input type="search" class="form-control " placeholder="Search">
+			</div>
+
+		</div>
+
+	</div>
+	<section class="call-out">
+		<tabset justified="true">
+			<tab class="" heading="APPLICATIONS" >
+
+				<div class="app-type-buttons">
+					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
 						Asset Management
 					</button>
-				</div>
-				<div class="col-md-3">
-					<button class="btn btn-sm btn-gray">
+					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
 						Network Design
 					</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-sm btn-gray">
+					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
 						Services
 					</button>
-				</div>
-				<div class="col-md-2">
-					<button class="btn btn-sm btn-gray">
+					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
 						Troubleshooting
 					</button>
-				</div>
-			</div>
-		</tab>
-		<tab heading="grid" >
-			<div ng-grid="gridOps" class="grid"></div>
-		</tab>
 
-	</tabset>
+				</div>
+				<div class="asset-management-app-list" ng-show="isAssetOpen" >
+					<div class="applist-row">
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+							<span class="badge app-notification-badge">!</span>
+						</div>
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="applist-row">
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="applist-row">
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="row">
+								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+								</div>
+								<div class="col-md-8">
+									<p>
+										PM APP
+									</p>
+									<p>
+										DOWNLOADED
+									</p>
+									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="network-design-app-list" ng-show="isNetworkDesignOpen" >
+					Network Design
+				</div>
+				<div class="services-app-list" ng-show="isServicesOpen" >
+					Services
+				</div>
+				<div class="troubleshooting-app-list" ng-show="isTroubleshootingOpen" >
+					Troubleshooting
+				</div>
+			</tab>
+			<tab heading="WORKBOARDS" >
+
+			</tab>
+
+		</tabset>
 	</section>
 </div>
 <div class="modal-footer ">
 	<button class="btn btn-sm btn-gray pull-left " ng-click="ok()">
-		<span><img src="/images/icons/AddButton-white.png " class="add-tab-icon-plus pull-left"/></span><span class="pull-right">  Add to Workboard</span>
+		<i class="glyphicon glyphicon-plus-sign"></i> Add to Workboard
 	</button>
 	<button class="btn btn-sm btn-gray pull-left" ng-click="cancel()">
 		Close

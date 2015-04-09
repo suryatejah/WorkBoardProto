@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Navigation
  *
@@ -12,10 +13,10 @@
 			controller : function($scope, $modal, $log) {
 
 				$scope.items = ['Chart', 'App2', 'APP3'];
-			
+
 				$scope.open = function(size) {
 					var url;
-					if (size == "sm") {
+					if (size == "lg") {
 						url = '/views/notifications.html'
 
 					} else {
@@ -39,13 +40,14 @@
 						$log.info('Modal dismissed at: ' + new Date());
 					});
 				};
+
 			},
 			controllerAs : 'navCtrl'
-		}
+		};
 	});
 	// Please note that $modalInstance represents a modal window (instance) dependency.
 	// It is not the same as the $modal service used above.
-	app.controller('ModalInstanceCtrl', function($scope,$modalInstance, items) {
+	app.controller('ModalInstanceCtrl', function($scope, $modalInstance, items) {
 		$scope.items = items;
 		$scope.selected = {
 			item : $scope.items[0]
@@ -55,8 +57,59 @@
 			$modalInstance.close($scope.selected.item);
 		};
 
+		$scope.isAssetOpen = false;
+
+		$scope.isNetworkDesignOpen = false;
+
+		$scope.isServicesOpen = false;
+
+		$scope.isTroubleshootingOpen = false;
+
+		$scope.appList = function($event) {
+
+			var name = $event.currentTarget.innerText || $event.currentTarget.textContent;
+
+			switch(name) {
+			case "Asset Management" :
+				$scope.isAssetOpen = true;
+				$scope.isNetworkDesignOpen = false;
+				$scope.isServicesOpen = false;
+				$scope.isTroubleshootingOpen = false;
+				break;
+			case "Network Design":
+				$scope.isAssetOpen = false;
+				$scope.isNetworkDesignOpen = true;
+				$scope.isServicesOpen = false;
+				$scope.isTroubleshootingOpen = false;
+				break;
+			case "Services":
+			    $scope.isAssetOpen = false;
+				$scope.isNetworkDesignOpen = false;
+				$scope.isServicesOpen = true;
+				$scope.isTroubleshootingOpen = false;
+				break;
+			case "Troubleshooting":
+				$scope.isAssetOpen = false;
+				$scope.isNetworkDesignOpen = false;
+				$scope.isServicesOpen = false;
+				$scope.isTroubleshootingOpen = true;
+				break;
+			};
+
+		};
+
 		$scope.cancel = function() {
 			$modalInstance.dismiss('cancel');
 		};
+
+		$scope.flash = {
+			visible : true,
+			config : {
+				swfUrl : 'resources/swfobject/AlarmWindow.swf',
+				height : '100%',
+				width : '100%'
+			}
+		};
+
 	});
 })();
