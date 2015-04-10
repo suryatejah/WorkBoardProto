@@ -39,7 +39,7 @@
 }
 .left-bar .divider {
 	height: 1px;
-	overflow: hidden;//
+	overflow: hidden;
 	background-color: #777783;
 }
 .left-bar {
@@ -61,25 +61,32 @@
 	background-color: #777783;
 	border-color: #777783;
 }
-#navigation-AOE {
+/*#navigation-AOE {
 	height: 7.5%;
+}*/
+.nav-header{
+	height: 10%;
 }
 #tabpanel-AOE {
 	height: 88%;
 	width: 100%;
 }
+.footer{
+	height: 15;
+}
+/*
 #footer-AOE {
 	padding-left: 5px;
 	text-align: left;
 	width: 100%;
-	height: 2.5%;
 	position: absolute;
 }
 #footer-AOE span {
 
 	color: #E4E6E9;
 	font-size: 13px !important;
-}
+}*/
+
 .right-inner-addon input {
 
 	background-image: url('/images/icons/SearchIcon-30.png');
@@ -131,6 +138,10 @@
 .add-tab-icon-plus {
 	height: 20px;
 	width: 20px;
+}
+
+.tab-panel > div > ul{
+	height:150px;
 }
 
 .nav > li > a {

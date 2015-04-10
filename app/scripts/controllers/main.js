@@ -16,7 +16,7 @@
 		return {
 			restrict:'E',
 			templateUrl:'views/main.html'
-		}
+		};
 	});
 	app.directive('collapseContent', ['$animate', function ($animate) {
 

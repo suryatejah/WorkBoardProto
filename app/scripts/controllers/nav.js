@@ -2,6 +2,8 @@
  * Navigation
  *
  */
+'use strict';
+
 (function() {
 	var app = angular.module('navigation', []);
 	app.directive('navWorkboard', function() {
@@ -15,11 +17,11 @@
 			
 				$scope.open = function(size) {
 					var url;
-					if (size == "sm") {
-						url = '/views/notifications.html'
+					if (size === 'sm') {
+						url = '/views/notifications.html';
 
 					} else {
-						url = '/views/applibrary.html'
+						url = '/views/applibrary.html';
 					}
 					var modalInstance = $modal.open({
 						templateUrl : url,
@@ -41,7 +43,7 @@
 				};
 			},
 			controllerAs : 'navCtrl'
-		}
+		};
 	});
 	// Please note that $modalInstance represents a modal window (instance) dependency.
 	// It is not the same as the $modal service used above.
