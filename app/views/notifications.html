@@ -2,12 +2,8 @@
 	<h3 class="modal-title">Alarm notifications!</h3>
 </div>
 <div class="modal-body">
-	<ul>
-		<li ng-repeat="item in items">
-			<a ng-click="selected.item = item">{{ item }}</a>
-		</li>
-	</ul>
-	Selected: <b>{{ selected.item }}</b>
+	
+	<div w11k-flash="flash.config" w11k-flash-visible="flash.visible"></div>
 </div>
 <div class="modal-footer">
 	<button class="btn btn-primary" ng-click="ok()">

@@ -8,7 +8,8 @@
  * Controller of the dashBoardSampleApp
  */
 (function() {
-	var app = angular.module('dashBoardSampleApp',['ui.bootstrap','ui.grid','ngGrid','tabpanel','navigation','adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','structures']);
+	var app = angular.module('dashBoardSampleApp',['ui.bootstrap','w11k.flash','w11k.flash.template','ui.grid','ngGrid','tabpanel','navigation','adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown',
+	'structures']);
 	app.controller('MainCtrl', ['$scope',function($scope) {
      $scope.devicesListCollapsed=false;
 	}]);
@@ -35,7 +36,7 @@
         function expandDone() {
           element.removeClass('collapsing');
           element.css({width: '20%'});
-         devicesList.css({width:'76%'});
+         devicesList.css({width:'75%'});
          expandCollapseIcon.attr('class','glyphicon glyphicon-chevron-left');
         }
 
@@ -57,7 +58,7 @@
 
         function collapseDone() {
           element.css({width: '0'}); // Required so that collapse works when animation is disabled
-          devicesList.css({width:'96%'});
+          devicesList.css({width:'95%'});
           element.removeClass('collapsing');
           expandCollapseIcon.attr('class','glyphicon glyphicon-chevron-right');
           element.addClass('collapse');
