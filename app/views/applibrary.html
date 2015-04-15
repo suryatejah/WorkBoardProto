@@ -1,4 +1,4 @@
-<div class="modal-body">
+
 	<div class="applibrary-header">
 		<p>
 			Application Library
@@ -7,7 +7,7 @@
 			<div class="col-md-1 ">
 				<i class="icon-filter glyphicon glyphicon-play"></i>
 			</div>
-			<div class="col-md-11 right-inner-addon ">
+			<div class="col-md-11 right-inner-addon">
 				<input type="search" class="form-control " placeholder="Search">
 			</div>
 
@@ -19,175 +19,24 @@
 			<tab class="" heading="APPLICATIONS" >
 
 				<div class="app-type-buttons">
-					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
+					<button class="btn btn-sm btn-gray" ng-click="ShowAppList($event)">
 						Asset Management
 					</button>
-					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
+					<button class="btn btn-sm btn-gray" ng-click="ShowAppList($event)">
 						Network Design
 					</button>
-					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
+					<button class="btn btn-sm btn-gray" ng-click="ShowAppList($event)">
 						Services
 					</button>
-					<button class="btn btn-sm btn-gray" ng-click="appList($event)">
+					<button class="btn btn-sm btn-gray" ng-click="ShowAppList($event)">
 						Troubleshooting
 					</button>
 
 				</div>
-				<div class="asset-management-app-list" ng-show="isAssetOpen" >
-					<div class="applist-row">
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-							<span class="badge app-notification-badge">!</span>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="applist-row">
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="applist-row">
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
-								</div>
-								<div class="col-md-8">
-									<p>
-										PM APP
-									</p>
-									<p>
-										DOWNLOADED
-									</p>
-									<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="network-design-app-list" ng-show="isNetworkDesignOpen" >
-					Network Design
-				</div>
-				<div class="services-app-list" ng-show="isServicesOpen" >
-					Services
-				</div>
-				<div class="troubleshooting-app-list" ng-show="isTroubleshootingOpen" >
-					Troubleshooting
-				</div>
+				<asset-management ng-show="isAssetOpen"></asset-management>
+				<network-design ng-show="isNetworkDesignOpen"></network-design>
+				<services ng-show="isServicesOpen" ></services>
+				<troubleshooting ng-show="isTroubleshootingOpen"></troubleshooting>
 			</tab>
 			<tab heading="WORKBOARDS" >
 
@@ -195,12 +44,11 @@
 
 		</tabset>
 	</section>
-</div>
 <div class="modal-footer ">
 	<button class="btn btn-sm btn-gray pull-left " ng-click="ok()">
 		<i class="glyphicon glyphicon-plus-sign"></i> Add to Workboard
 	</button>
-	<button class="btn btn-sm btn-gray pull-left" ng-click="cancel()">
+	<button class="btn btn-sm btn-gray pull-left" ng-click="libraryVisible=!libraryVisible">
 		Close
 	</button>
 </div>

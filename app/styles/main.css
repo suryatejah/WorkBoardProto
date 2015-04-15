@@ -36,7 +36,7 @@
 
 .dashboard-content {
   width: 100%;
-  padding: 20px;
+  padding:  5px;
 }
 
 .deviceslist {
@@ -52,7 +52,6 @@
   background-color: #e4e6e9;
   border-bottom: 1px solid #ccc;
 }
-
 .left-bar {
   width: 5%;
   float: left;
@@ -73,24 +72,29 @@
   color: #E4E6E9;
   background-color: #777783;
 }
-
-#navigation-AOE {
-  height: 7.5%;
+/*#navigation-AOE {
+	height: 7.5%;
+}*/
+.nav-header{
+	height: 10%;
 }
 
 #tabpanel-AOE {
   height: 88%;
   width: 100%;
 }
-
-#footer-AOE {
-  padding-left: 5px;
-  text-align: left;
-  width: 100%;
-  height: 2.5%;
-  position: absolute;
+.footer{
+	height: 15;
 }
-
+/*
+#footer-AOE {
+	padding-left: 5px;
+	text-align: left;
+	width: 100%;
+	position: absolute;
+	color: #E4E6E9;
+	font-size: 13px !important;
+}*/
 #footer-AOE span {
   color: #E4E6E9;
   font-size: 13px !important;
@@ -156,6 +160,10 @@
   margin-bottom: 5px;
 }
 
+.tab-panel > div > ul{
+	height:150px;
+}
+
 .nav > li > a {
   color: #ffffff;
   position: relative;
@@ -196,16 +204,16 @@
 .dropdown-menu > li > span {
   display: block;
   cursor: pointer;
-  padding: 3px 20px;
+  padding: 3px 20px 0px 0px;
   clear: both;
   font-weight: 400;
   line-height: 1.42857143;
-  color: #333;
+  color: #777783;
   white-space: nowrap;
 }
 
 .dropdown-menu > li > span:focus, .dropdown-menu > li > span:hover {
-  color: #262626;
+  color: #777783;
   text-decoration: none;
   background-color: #8CC63E;
 }
@@ -216,7 +224,17 @@
   background-color: #337ab7;
   outline: 0;
 }
-
+.dropdown-menu:before{
+  position: absolute;
+  margin-top: -27px;
+  right:0;
+  display: inline-block;
+  border-bottom:10px solid #fff;
+  border-top:10px solid #fff;
+  border-left:20px solid #fff;
+  border-right:20px solid #fff;
+  content: '';
+}
 .nav-search {
   width: 100% !important;
 }
@@ -247,7 +265,8 @@
 
 .aoeLogo {
   margin: 5px 0 0 0;
-  padding: 10px 0 10px 15px;
+   padding: 10px 0 10px 15px;
+  
   height: 30px;
 }
 
@@ -257,18 +276,11 @@
 }
 
 .adtranLogo {
-  opacity: 0.9;
   margin: 5px 0 5px 0;
   height: 30px;
 }
 
-.col-md-push-left-1 {
-  left: 8.99333333%;
-}
 
-.col-md-push-left-2 {
-  left: 17.99333333%;
-}
 
 html, body {
   height: 100%;
@@ -321,17 +333,10 @@ body {
     width: 31%;
   }
 
-  .modal-dialog {
-    margin: 30px auto;
-  }
 
   .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-  }
-
-  .modal-sm {
-    width: 400px;
   }
 }
 
@@ -391,7 +396,7 @@ body {
   float: left;
   min-width: 180px;
   padding: 15px;
-  margin: 2px 0 0;
+  margin: 1px 0 0;
   font-size: 14px;
   text-align: left;
   list-style: none;
@@ -408,203 +413,6 @@ body {
 
 .open .col-md-2 {
   background-color: #fff;
-  z-index: 1;
+  z-index: 1000;
 }
 
-.applibrary-header {
-  background-color: #E4E6E9;
-  height: 30%;
-  width: 100%;
-  padding: 5px;
-}
-
-.applibrary-header > p {
-  font-size: 14px;
-  color: #fff;
-  width: 100%;
-  padding: 5px;
-  background-color: #777783;
-}
-
-.icon-filter {
-  cursor: pointer;
-  padding: 5px;
-  transform: rotate(90deg);
-}
-
-.icon-filter:hover {
-  color: #8cc63e;
-  background-color: #fff;
-}
-
-.applibrary-header input[type=search] {
-  border-radius: 0px;
-  height: 25px;
-  width: 105%;
-}
-
-.call-out {
-  height: 80%;
-}
-
-.call-out .tab-content {
-  min-height: 300px;
-}
-
-.call-out .row {
-  padding: 5px;
-  text-align: center;
-}
-
-.call-out .nav-tabs > li.active > a,.call-out .nav-tabs > li.active > a:focus,.call-out .nav-tabs > li.active > a:hover {
-  color: #777783;
-  cursor: default;
-  background-color: #fff;
-  border-bottom-color: transparent;
-}
-
-.call-out .nav > li > a:hover {
-  text-decoration: none;
-  background-color: #777783;
-}
-
-.asset-management-app-list, .services-app-list, .troubleshooting-app-list,.network-design-app-list {
-  min-height: 250px;
-  background-color: #e4e6e9;
-  margin: 5px;
-  padding: 5px;
-}
-
-.modal-body {
-  padding: 0px;
-}
-
-.applibrary-search {
-  height: 30px;
-}
-
-.call-out .btn {
-  width: 90px;
-  border-radius: 8px;
-}
-
-.call-out .btn:focus {
-  outline: 0 none;
-  padding: 5px 0px;
-  color: #fff;
-}
-
-.call-out .btn:active:focus,.call-out .btn.active:focus {
-  color: #fff;
-  background-color: #8cc36e;
-}
-
-.call-out .btn:hover {
-  background-color: #8cc36e;
-  color: #fff;
-}
-
-.app-type-buttons {
-  margin: 5px;
-  padding: 5px;
-}
-
-.asset-management-app-list:after , .services-app-list:after , .troubleshooting-app-list:after ,.network-design-app-list:after {
-  position: absolute;
-  margin-top: -15px;
-  display: inline-block;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #e4e6e9;
-  border-left: 10px solid transparent;
-  content: '';
-}
-
-.asset-management-app-list:after {
-  left: 40px;
-}
-
-.services-app-list:after {
-  right: 150px;
-}
-
-.troubleshooting-app-list:after {
-  right: 55px;
-}
-
-.network-design-app-list:after {
-  left: 140px;
-}
-
-.asset-management-app-list .applist-row {
-}
-
-.app-icon {
-  height: 30px;
-  width: 30px;
-}
-
-.applist-row .row {
-  padding: 0px;
-  margin: 0px;
-  height: 100%;
-}
-
-.applist-row > .col-md-4 {
-  background-color: #fff;
-  border: 1px solid #777783;
-  height: 60px;
-  margin: 8px;
-  padding: 0px;
-  width: 110px;
-}
-
-.applist-row > .col-md-4 > .row > .col-md-4:hover {
-  background-color: #8cc63e;
-}
-
-.applist-row > .col-md-4 > .row > .col-md-4 {
-  padding: 10px 0px 10px 0px;
-  background-color: #777783;
-  height: 100%;
-}
-
-.applist-row > .col-md-4 > .row > .col-md-8 {
-  padding: 0px;
-}
-
-.applist-row > .col-md-4 > .row > .col-md-8 > p {
-  margin: 0px;
-  float: left;
-  padding-left: 5px;
-}
-
-.applist-row > .col-md-4 > .row > .col-md-8 > p:first-of-type {
-  font-weight: bold;
-  color: #777783;
-}
-
-.applist-row > .col-md-4 > .row > .col-md-8 > p:last-of-type {
-  color: #777783;
-  font-size: 11px;
-}
-
-.add-app-icon {
-  float: right;
-  margin-bottom: 0px;
-  padding: 5px 5px 5px 0px;
-  color: #777783;
-}
-
-.add-app-icon:hover {
-  color: #8cc63e;
-}
-
-.app-notification-badge {
-  background-color: #ff0000;
-  font-family: "Arial Black";
-  right: -8px;
-  top: -8px;
-  z-index: 1;
-  position: absolute;
-  font-size: 14px;
-}
