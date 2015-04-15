@@ -23,31 +23,31 @@
 				/**
 				 *Dashboard components declaration part
 				 */
-				var name = "aoe_dashboard";
+				var name = 'aoe_dashboard';
 				var model = localStorageService.get(name);
 				if (!model) {
 					// set default model for demo purposes
 				model = {
-						title : "",
-						structure : "6-6",
+						title : '',
+						structure : '6-6',
 						rows : [{
 							columns : [{
-								styleClass : "col-md-6",
+								styleClass : 'col-md-6',
 								widgets : [{
-									type : "chart",
-									title : "Recently Scheduled Tasks"
+									type : 'chart',
+									title : 'Recently Scheduled Tasks'
 								}]
 							}, {
-								styleClass : "col-md-6",
+								styleClass : 'col-md-12',
 								widgets : [{
-									type : "grid",
-									title : "Historical Alarms"
+									type : 'grid',
+									title : 'Alarms'
 								}, {
-									type : "markdown",
+									type : 'markdown',
 									config : {
-										content : "No Alerts Found"
+										content : 'No Alerts Found'
 									},
-									title : "Capacity Monitor Alerts"
+									title : 'Capacity Monitor Alerts'
 								}]
 							}]
 						}]
@@ -70,7 +70,7 @@
 					id : '1',
 					active : true,
 					model:model,
-					collapsible:false,
+					collapsible:true,
 					editMode:true,
 					name:name
 				}];
@@ -83,10 +83,10 @@
 				var addNewWorkboard = function() {
 					var id = $scope.workboards.length + 1;
 					$scope.model = {};
-					$scope.name = "Workboard"+id+"_dashboard";
+					$scope.name = 'Workboard'+id+'_dashboard';
 					$scope.workboards.push({
 						id : id,
-						title : "Workboard-"+id,
+						title : 'Workboard-'+id,
 						active : true
 					});
 				};			

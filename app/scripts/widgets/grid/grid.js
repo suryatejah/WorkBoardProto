@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("dashBoardSampleApp.widgets.grid",["adf.provider"])
+angular.module("dashBoardSampleApp.widgets.grid",["adf.provider",'dashBoardSampleApp.controllers.ServerGateways'])
 	.config(function(dashboardProvider){
 		dashboardProvider
 	      .widget('grid', {
@@ -9,36 +9,26 @@ angular.module("dashBoardSampleApp.widgets.grid",["adf.provider"])
 	        controller: 'gridCtrl',
 	        templateUrl: 'scripts/widgets/grid/grid.html'
 	      });
-	  }).controller('gridCtrl', function($scope, config){
-	    $scope.details = [{
-					src : "10.5.221.34",
-					desc : "dot3OamNonThresholdEvent",
-					sev : "Warning"
-				}, {
-					src : "10.5.221.34",
-					desc : "adGenEfmExtLinkRemovedXCVThreshExceededAct",
-					sev : "Minor"
-				}, {
-					src : "10.5.221.34",
-					desc : "adGenEfmExtLinkXCVThreshExceededAct",
-					sev : "Minor"
-				}, {
-					src : "10.5.221.34",
-					desc : "adGenEfmExtLinkRemovedFarEndLbkDetectedAct",
-					sev : "Minor"
-				}];
-				$scope.gridOps = {
-					"data" : 'details',
-					multiSelect : false,
-					columnDefs : [{
-						field : "desc",
-						displayName : "Description"
-					},{
-						field : "sev",
-						displayName : "Severity"
-					},{
-						field : "src",
-						displayName : "Source"
-					}]
-				};
-	});
+	  }).controller('gridCtrl', ['$scope','serverGateway',function($scope,serverGateway){
+	  	serverGateway.getAlarms('https://172.20.36.65/aoe/GetAlarms.action?view=json&applicationName=Main&offset=0&nochache=1428490104281&sortAscending=false&numberRequested=50&filterName=%3CAll%3E').then(function(data){
+	  		$scope.details = data;
+	  		console.log($scope.details,data);
+	  	});
+		$scope.gridOps = {
+			multiSelect : false,
+			data:'details',
+			columnDefs : [{
+				field : "managedObjectID",
+				displayName : "Managed Object"
+			},{
+				field : "description",
+				displayName : "Description"
+			},{
+				field : "severity",
+				displayName : "Severity"
+			},{
+				field : "source",
+				displayName : "Source"
+			}]
+		};
+	}]);

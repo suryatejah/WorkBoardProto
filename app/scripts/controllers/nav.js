@@ -39,8 +39,6 @@
 			controllerAs : 'navCtrl'
 		};
 	});
-	app.directive('', function() {
-	});
 	app.directive('appLibrary', function() {
 		return {
 			restrict : 'E',
