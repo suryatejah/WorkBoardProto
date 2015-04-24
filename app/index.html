@@ -11,13 +11,16 @@
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 		<link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
 		<link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
-		<link rel="stylesheet" href="bower_components/w11k-flash/dist/js/w11k-flash.css" />
+		<link rel="stylesheet" href="bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.css" />
 		<!-- endbower -->
 		<!-- endbuild -->
 		<!-- build:css(.tmp) styles/main.css -->
 		<link rel="stylesheet" href="styles/main.css" />
-		<link rel="stylesheet" href="views/appLibrary/applibrary.css" />
+		<link rel="stylesheet" href="styles/applibrary.css" />
 		<link rel="stylesheet" href="styles/ng-grid.min.css" />
+	
+	  <link rel="stylesheet" href="styles/index.css"/>
+	  <link rel="stylesheet" href="styles/controlpanel.css"/>
 		<!-- endbuild -->
 
 	</head>
@@ -34,7 +37,9 @@
 		<section id="tabpanel-AOE">
         <workboard-content></workboard-content>
 		</section>
-        <footer>Copyright(c) 2001-2014 by ADTRAN Inc., All rights reserved</footer> 
+        <div id="footer-AOE">
+        <span > Copyright(c) 2001-2014 by ADTRAN Inc., All rights reserved</span>
+        </div>
 		<!-- build:js(.) scripts/vendor.js -->
 		<!-- bower:js -->
 		<script src="bower_components/jquery/dist/jquery.js"></script>
@@ -45,46 +50,53 @@
 		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 		<script src="bower_components/angular-ui-grid/ui-grid.js"></script>
 		<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+		<script src="bower_components/angular-ui-sortable/sortable.js"></script>
 		<script src="bower_components/ng-grid/build/ng-grid.js"></script>
-		<!-- flash modules to run flex components in angular JS-->
-		<script src="bower_components/w11k-flash/dist/js/w11k-flash.js"></script>
-		<script src="bower_components/w11k-flash/dist/js/w11k-flash.tpl.js"></script>
-		<!-- swfobject for flex-->
-		<script src="bower_components/swfobject/swfobject/src/swfobject.js"></script>
+		<script src="bower_components/Sortable/Sortable.js"></script>
+		<script src="bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.js"></script>
+		<script src="bower_components/swfobject/swfobject/swfobject.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angularLocalStorage/src/angularLocalStorage.js"></script>
+		<script src="bower_components/showdown/src/showdown.js"></script>
+		<script src="bower_components/angular-markdown-directive/markdown.js"></script>
+		<script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
+		<script src="bower_components/highcharts/highcharts.js"></script>
+		<script src="bower_components/highcharts/highcharts-more.js"></script>
+		<script src="bower_components/highcharts/modules/exporting.js"></script>
+		<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 
 		<!-- build:js({.tmp,app}) scripts/scripts.js -->
+		<script src="scripts/widgets/markdown/markdown.js"></script>
 		<script src="scripts/app.js"></script>
+		<!-- <script src="scripts/HelloWorld.js"></script> -->
 		<script src="scripts/controllers/main.js"></script>
 		<script src="scripts/controllers/tab.js"></script>
 		<script src="scripts/controllers/nav.js"></script>
 		<script src="scripts/controllers/ServerGateway.js"></script>
 		<script src="scripts/structures.js"></script>
-		<!-- endbuild -->
-		
-		<script src="bower_components/angular-ui-sortable/sortable.js"></script>
-		<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-		<script src="scripts/widgets/markdown/markdown.js"></script>
-		<script src="scripts/widgets/grid/grid.js"></script>
-		<script src="scripts/widgets/chart/chart.js"></script>
-		<script src="bower_components/jquery-ui/ui/core.js"></script>
-		<script src="bower_components/jquery-ui/ui/widget.js"></script>
-		<script src="bower_components/jquery-ui/ui/mouse.js"></script>
-		<script src="bower_components/jquery-ui/ui/sortable.js"></script>
-		<script src="bower_components/json3/lib/json3.js"></script>
-		<script src="bower_components/angular-markdown-directive/markdown.js"></script>
-		<script src="bower_components/showdown/src/showdown.js"></script>
-	    <script type="text/javascript" src="bower_components/highcharts/highcharts.js"></script>
-    	<script type="text/javascript" src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
-		
-		<script type="text/javascript" src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
-        <script type="text/javascript" src="src/scripts/adf.js"></script>
+		<script src="scripts/json/NECollection.js"></script>
+		<script src="scripts/json/AppLibrary.js"></script>
+		<script src="scripts/utils/Global.js"></script>
+		<script src="scripts/services/DeviceService.js"></script>
+		<script src="scripts/services/WorkBoardService.js"></script>
+		<script src="scripts/controllers/ControlPanelCtrl.js"></script>
+		<script src="scripts/filter/NodeFilter.js"></script>
+		<script src="scripts/services/DeviceService.js"></script>
+		<script type="text/javascript" src="src/scripts/adf.js"></script>
 	    <script type="text/javascript" src="src/scripts/provider.js"></script>
 	    <script type="text/javascript" src="src/scripts/widget-content.js"></script>
 	    <script type="text/javascript" src="src/scripts/widget.js"></script>
 	    <script type="text/javascript" src="src/scripts/dashboard.js"></script>
 	    <script type="text/javascript" src="src/scripts/column.js"></script>
 	    <script type="text/javascript" src="src/scripts/row.js"></script>
+	    <script type="text/javascript" src="scripts/widgets/markdown/markdown.js"></script>
+	    <script type="text/javascript" src="scripts/widgets/grid/grid.js"></script>
+	    <script type="text/javascript" src="scripts/widgets/chart/chart.js"></script>
+		<script src="scripts/widgets/grid/grid.js"></script>
+		<script src="scripts/widgets/chart/chart.js"></script>
+		<!-- endbuild -->
+		
 	</body>
 </html>

@@ -1,10 +1,17 @@
 <!-- tabset directive in "ui.bootstrap" module is acting as tabs container -->
 <tabset >
 	<!-- using tab directive, it will provide tab structure -->
-	<tab ng-repeat="workboard in workboards" class="tab" active="workboard.active">
+	<tab ng-repeat="workboard in workboards" class="tab" active="workboard.active" ng-init="init()">
 		<!-- tab-heading directive will provide header part in the tab-->
 		<tab-heading  >
-			{{workboard.title}}
+		<!-- <input type="text" ng-model="test" ng-value="test" placeholder="{{placeholderModel}}"/> -->
+		 {{workboard.title}}  <i class="glyphicon glyphicon-pencil" ng-click="editWorkBoard(workboard)" ></i>
+		 <!--  <div  id="demo" ng-show="workboard.editableStatus"> -->
+		 <input type="text" ng-show="workboard.editableStatus" ng-model="workboard.title" ><span class="glyphicon glyphicon-ok" ng-show="workboard.editableStatus" ng-click="saveWorkBoard(workboard)"></span>
+		 <!-- </div> -->
+		
+		<!-- <input type="text" value="{{workboard.title}}"> -->
+			
 			<!-- tab close icon -->
 			
 				<span class="badge close-tab-icon" ng-click="removeTab($index,$event)"  ng-if="workboard.id!=1" > 
@@ -13,14 +20,14 @@
 			
 		</tab-heading>
 		<div class="dashboard-content">
-			<adf-dashboard name="{{workbaord.name}}" collapsible="{{workboard.collapsible}}" structure="6-6" adf-model="workboard.model" />
+			<adf-dashboard name="{{workboard.name}}" collapsible="{{workboard.collapsible}}" droppable structure="6-6" adf-model="workboard.model" />
 		</div>
 	</tab>
 	<!-- Here onselect it will add new workboard to the tabset-->
 	<tab select="addWorkspace()" class="add-tab">
 		<!-- tab add icon -->
 		<tab-heading>
-			<img src="/images/icons/AddButton.png" class="add-tab-icon-plus"/>
+			<img src="images/icons/AddButton.png" class="add-tab-icon-plus"/>
 		</tab-heading>
 	</tab>
 </tabset><!---

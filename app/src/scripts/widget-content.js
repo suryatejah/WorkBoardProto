@@ -59,7 +59,6 @@ angular.module('adf')
     }
 
     function compileWidget($scope, $element, currentScope) {
-    	console.log("reload called");
       var model = $scope.model;
       var content = $scope.content;
 

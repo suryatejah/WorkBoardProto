@@ -1,7 +1,7 @@
 <div class="asset-management-app-list"  >
 	<div class="applist-row" >
 		<div class="col-md-4" ng-repeat="app in assetList">
-			<div class="row">
+			<div ng-click="OnAppClick()" class="row" draggable>
 				<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
 				</div>
 				<div class="col-md-8">

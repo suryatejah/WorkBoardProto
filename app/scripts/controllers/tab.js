@@ -9,7 +9,7 @@
  * 
  */
 (function() {
-	var app = angular.module('tabpanel', ['adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','dashBoardSampleApp.widgets.chart','dashBoardSampleApp.widgets.grid','structures']);
+	var app = angular.module('dashBoardSampleApp');
 	/**
 	 * tabPanel is directive, which is restricted to element type
 	 * we are providing tabpanel html content in the /views/tabs/tab.html
@@ -18,13 +18,13 @@
 	app.directive('tabPanel', function() {
 		return { 
 			restrict : 'E',
-			templateUrl : '/views/tabs/tab.html',
+			templateUrl : 'views/tabs/tab.html',
 			controller : function($scope, localStorageService) {
 				/**
 				 *Dashboard components declaration part
 				 */
 				var name = 'aoe_dashboard';
-				var model = localStorageService.get(name);
+				var model = undefined;
 				if (!model) {
 					// set default model for demo purposes
 				model = {
@@ -62,19 +62,20 @@
 					localStorageService.set(name, model);
 				});
 
-				/*
-				 End of Dashboard components declaration part
-				*/
-				$scope.workboards = [{
+				$scope.test = false;
+				/* End of Dashboard components declaration part */
+
+				$scope.workboards = [ {
 					title : 'Workboard-1',
 					id : '1',
 					active : true,
-					model:model,
-					collapsible:true,
-					editMode:true,
-					name:name
-				}];
-				
+					model : model,
+					collapsible : false,
+					editMode : true,
+					name : name,
+					editableStatus:false
+				} ];
+
 				var setAllInactive = function() {
 					angular.forEach($scope.workboards, function(workboard) {
 						workboard.active = false;
@@ -86,15 +87,38 @@
 					$scope.name = 'Workboard'+id+'_dashboard';
 					$scope.workboards.push({
 						id : id,
-						title : 'Workboard-'+id,
-						active : true
+						title : 'Workboard-' + id,
+						active : true,
+						model : {
+							title : '',
+							structure : '6-6',
+							rows : [{
+								columns : [{
+									styleClass : 'col-md-6',
+									widgets : []
+								}]
+							}]
+						},
+						collapsible : true,
+						editMode : true,
+						name : name
 					});
 				};			
 				$scope.addWorkspace = function() {
 					setAllInactive();
 					addNewWorkboard();
 				};
-				$scope.removeTab = function(index, $event) {
+				/* for editing wordboardname*/
+				$scope.editWorkBoard = function(workboard) {
+					
+					workboard.editableStatus = true;
+					
+				};
+				$scope.saveWorkBoard = function(workboard) {
+					workboard.editableStatus = false;
+					
+				};
+							$scope.removeTab = function(index, $event) {
 
 					$event.preventDefault();
 					$scope.workboards.splice(index, 1);

@@ -1,0 +1,79 @@
+<!-- <div class="panel">
+	<div class="panel-title">
+		Control panel
+	</div>
+</div> -->
+
+<div id="sidebar-wrapper"  ng-controller="ControlPanelCtrl as ctrl">
+  <div class="control-panel-heading">CONTROL PANEL</div>
+ <div class="filterSearch-Wrapper">
+  <div ng-show ="(ctrl.nodeList | NodeFilter:nodeQuery).length <= 10" class="filter-icon" id="filterCollapsableBtn" ng-click="ctrl.filterCollapsable()"></div>
+  <div ng-show ="(ctrl.nodeList | NodeFilter:nodeQuery).length > 10" class="filter-icon filter-icon-glow" id="filterCollapsableBtn" ng-click="ctrl.filterCollapsable()"></div>      
+   
+   <div class="searchBar-devices">
+    <div class="filter-icon1" id="searchPanelBtn" ng-click="ctrl.SearchPanelOptions()" >
+      <span class="search-selection-icon" id="searchSelectionIcon" searchType="ctrl.searchType.ALL">All</span>	
+    </div>
+    <div class="search-panel" id="searchPanel">
+   	  <ul>
+   	    <!-- <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-img1', ctrl.searchType.CUSTOMER)" >			     			
+  			<span class="search-panel-icon search-panel-icon-img1"></span><span class="search-panel-text">ALL</span>		     			
+  		  </li> -->
+  	    <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-imgAll', ctrl.searchType.CUSTOMER)" >			     			
+  			  <span class="search-panel-icon search-panel-icon-imgAll"></span><span class="search-panel-text">All</span>		     			
+  		  </li>
+  		  <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-img1', ctrl.searchType.CUSTOMER)" >			     			
+  			  <span class="search-panel-icon search-panel-icon-img1"></span><span class="search-panel-text">Customer ID</span>		     			
+  		  </li>
+  		  <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-img2', ctrl.searchType.DEVICE)">
+  			  <span class="search-panel-icon search-panel-icon-img2"></span><span class="search-panel-text">Devices</span>
+  		  </li>
+  		  <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-img3', ctrl.searchType.NETWORK)">
+  			  <span class="search-panel-icon search-panel-icon-img3"></span><span class="search-panel-text">Networks</span>
+  		  </li>
+  		  <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-img4', ctrl.searchType.SERVICE)">
+  			  <span class="search-panel-icon search-panel-icon-img4"></span><span class="search-panel-text">Services</span>
+  		  </li>
+  		  <li class="search-Panel-List searchPanelList" ng-click="ctrl.changeSearchPanelIcon('search-panel-icon-img5', ctrl.searchType.TEMPLATE)">
+  			  <span class="search-panel-icon search-panel-icon-img5"></span><span class="search-panel-text">Templates</span>
+  		  </li>
+  	  </ul>
+   </div>
+    <input type="text" placeholder="Search" ng-model="nodeQuery" class="form-control" ng-model-options="{ debounce: ctrl.thresholdSearchPauseTime}" >
+    <i class="glyphicon glyphicon-search controlPanelSearchIcon"></i>
+  </div>
+  <div style="clear:both;"></div>
+  <!-- ng-change='ctrl.filterIconDefault()' -->
+  <div class="collapsable-filter" id="collapsableFilter">
+     <div class="filter-heading">ADVANCED SEARCH</div>
+     <div class="filter-checkboxes" id="filterCheckboxes"></div>
+   </div>
+ </div>
+  <ul class="sidebar-nav">         
+    <li ng-hide="(ctrl.nodeList | NodeFilter:nodeQuery).length > 10" ng-repeat="node in ctrl.nodeList | NodeFilter:nodeQuery | orderBy: 'name'">
+      <a href="#">
+      <input class="list-Checkbox" id="{{node.name}}" type="checkbox"  value="{{node.name}}" ng-checked="ctrl.selection.indexOf(node.name) > -1" ng-click="ctrl.addSelctedItems(node)" />
+				
+      {{node.name}}
+      
+    </a>
+    
+    
+    <span class="checkbox-status"><i class="glyphicon glyphicon-record status-icon"></i> Status</span>
+    <div style="clear:both;"></div>		    
+  </li>
+  <!-- <li ng-show="(ctrl.nodeList | NodeFilter:nodeQuery).length >= 10">
+ <p >{{(ctrl.nodeList | NodeFilter:nodeQuery).length}} items found, please refine your search</p>
+  </li>
+  <li>
+ <p ng-show="(ctrl.nodeList | NodeFilter:nodeQuery).length==0">There are no results for this search</p>
+  </li>		 -->  
+</ul>
+<div class="total-items-found">
+ <p ng-show="(ctrl.nodeList | NodeFilter:nodeQuery).length==0">There are no results for this search</p>
+</div>
+<div class="total-items-found" ng-show="(ctrl.nodeList | NodeFilter:nodeQuery).length >= 10">
+ <p><i class="glyphicon glyphicon-warning-sign"></i><strong> {{(ctrl.nodeList | NodeFilter:nodeQuery).length}}</strong> items found, please refine your search</p>
+</div>
+<button class="btn Pin-checked-items" ng-disabled="! ctrl.pinAction" ng-click="ctrl.addPinCheck()"><i class="glyphicon glyphicon-pushpin"> </i> Pin Checked Items</button>
+</div> 

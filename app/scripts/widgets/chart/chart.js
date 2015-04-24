@@ -1,13 +1,13 @@
 'use strict';
 
-var myapp = angular.module('dashBoardSampleApp.widgets.chart', ['adf.provider',"highcharts-ng"])
+var myapp = angular.module('dashBoardSampleApp')
 .config(function(dashboardProvider){
 		dashboardProvider
 	      .widget('chart', {
 	        title: 'Chart',
 	        description: 'Chart Widget',
 	        controller: 'myctrl',
-	        templateUrl: 'scripts/widgets/chart/chart.html'
+	        templateUrl: 'scripts/widgets/templates/chart.html'
 	      });
 	  }).controller('myctrl', function ($scope) {
 

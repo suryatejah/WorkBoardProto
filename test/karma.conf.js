@@ -30,20 +30,25 @@ module.exports = function(config) {
       'bower_components/jquery-ui/jquery-ui.js',
       'bower_components/angular-ui-sortable/sortable.js',
       'bower_components/ng-grid/build/ng-grid.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-scenario/angular-scenario.js',
-      'bower_components/angular-local-storage/dist/angular-local-storage.js',
-      'bower_components/json3/lib/json3.min.js',
+      'bower_components/Sortable/Sortable.js',
+      'bower_components/angular-dashboard-framework/dist/angular-dashboard-framework.js',
+      'bower_components/swfobject/swfobject/swfobject.js',
+      'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/angularLocalStorage/src/angularLocalStorage.js',
       'bower_components/showdown/src/showdown.js',
       'bower_components/angular-markdown-directive/markdown.js',
       'bower_components/highcharts-ng/dist/highcharts-ng.js',
       'bower_components/highcharts/highcharts.js',
       'bower_components/highcharts/highcharts-more.js',
       'bower_components/highcharts/modules/exporting.js',
+      'bower_components/angular-local-storage/dist/angular-local-storage.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/json3/lib/json3.min.js',
       // endbower
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      // 'test/mock/**/*.js',
+      // 'dist/**/**/*.js',
+      'test/spec/controllers/mainSpec.js'
     ],
 
     // list of files / patterns to exclude

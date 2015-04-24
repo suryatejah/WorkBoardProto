@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular.module('dashBoardSampleApp', ['ngRoute','adf','LocalStorageModule','dashBoardSampleApp.widgets.markdown','dashBoardSampleApp.widgets.grid','dashBoardSampleApp.widgets.chart','structures','serverGateway']).config(function($routeProvider) {
+angular.module('dashBoardSampleApp', ['ngRoute','ui.bootstrap', 'ui.grid', 'ngGrid', 'adf', 'LocalStorageModule', 'btford.markdown','highcharts-ng']).config(function($routeProvider) {
 	$routeProvider.when('/', {
 		templateUrl : 'views/tabs/tab.html',
 		controller : 'TabController'

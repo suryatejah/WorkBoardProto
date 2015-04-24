@@ -68,7 +68,7 @@ module.exports = function (grunt) {
       options: {
         port: 9090,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '172.20.36.111',
+        hostname: 'localhost',
         livereload: 35728
       },
       livereload: {
@@ -206,7 +206,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/styles/fonts/*'
+          '<%= yeoman.dist %>/fonts/*'
         ]
       }
     },
@@ -231,8 +231,13 @@ module.exports = function (grunt) {
     },
 
     // Performs rewrites based on filerev and the useminPrepare configuration
+    
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+    /**
+     * 
+     * Images issue resolved!
+     */
+      html: ['<%= yeoman.dist %>/**/*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
         assetsDirs: [
@@ -303,7 +308,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html', 'views/{,*/}*.html'],
+          src: ['*.html','views/{,*/}*.html','src/{,*/}*.html', 'scripts/widgets/{,*/}*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -341,9 +346,11 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
-            'views/{,*/}*.html',
+           'views/{,*/}*.html',
+            'src/{,*/}*.html',
+            'scripts/widgets/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'fonts/{,*/}*.*'
           ]
         }, {
           expand: true,

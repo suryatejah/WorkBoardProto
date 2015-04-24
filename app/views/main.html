@@ -2,47 +2,33 @@
 	<ul class="nav  nav-stacked">
 		<li>
 			<a >
-			<button class="btn-leftbar" ng-click="devicesListCollapsed=!devicesListCollapsed">
+			<button class="btn btn-leftbar" ng-click="((devicesListCollapsed=!devicesListCollapsed) && (devicesListCollapsedItems=false))">
 				<i id="expand-collapse" class="glyphicon glyphicon-chevron-right"></i>
 			</button></a>
 		</li>
-		<li>
-			<a > <img class="leftbar-icons" src="images/icons/Devices-48.png"></a>
-		</li>
-		<li>
-			<a > <img class="leftbar-icons" src="images/icons/Networks-48.png"></a>
-		</li>
-		<li>
-			<a > <img class="leftbar-icons" src="images/icons/Templates-20.png"></a>
-		</li>
-	</ul>
-	<!-- <div class="left-bar">
-		<div>
-			<button class="btn-leftbar" ng-click="devicesListCollapsed=!devicesListCollapsed">
-				<i id="expand-collapse" class="glyphicon glyphicon-chevron-left"></i>
-			</button>
-		</div>
-		<div>
-			 <img class="leftbar-icons" src="images/icons/Devices-48.png">
-		</div>
-		<div>
-			<img class="leftbar-icons" src="images/icons/Networks-48.png">
-		</div>
-		<div>
-			<img class="leftbar-icons" src="images/icons/Templates-20.png">
-		</div>
-	
-</div> -->
-</div>
-<div class="deviceslist" collapse-content="!devicesListCollapsed">
 
+		<li>
+			<a>
+			  <button class="btn btn-leftbar" ng-click="((devicesListCollapsedItems=!devicesListCollapsedItems) && (devicesListCollapsed=false))" id="pinIcon">				
+					<i id="expand-collapse" class="glyphicon glyphicon-pushpin"></i>
+			  </button>
+			</a>			
+		</li>		
+	</ul>
+</div>
+
+<div class="deviceslist" collapse-content="!devicesListCollapsed">
 	<div class="panel">
 		<div class="panel-title">
 			Control panel
 		</div>
-
 	</div>
 </div>
+
+<div class="deviceslist" collapse-pinned-items="!devicesListCollapsedItems">
+
+</div>
+
 <div class="right-content">
 	<tab-panel></tab-panel>
 </div>

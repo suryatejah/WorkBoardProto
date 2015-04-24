@@ -1,0 +1,83 @@
+@font-face
+{
+font-family: SourceSansPro-Black;
+src: url('../fonts/OTF/SourceSansPro-Black.otf')
+    ,url('../fonts/OTF/SourceSansPro-Black.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-BlackIt;
+src: url('../fonts/OTF/SourceSansPro-BlackIt.otf')
+    ,url('../fonts/OTF/SourceSansPro-BlackIt.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-Bold;
+src: url('../fonts/OTF/SourceSansPro-Bold.otf')
+    ,url('../fonts/OTF/SourceSansPro-Bold.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-BoldIt;
+src: url('../fonts/OTF/SourceSansPro-BoldIt.otf')
+    ,url('../fonts/OTF/SourceSansPro-BoldIt.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-ExtraLight;
+src: url('../fonts/OTF/SourceSansPro-ExtraLight.otf')
+    ,url('../fonts/OTF/SourceSansPro-ExtraLight.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-ExtraLightIt;
+src: url('../fonts/OTF/SourceSansPro-ExtraLightIt.otf')
+    ,url('../fonts/OTF/SourceSansPro-ExtraLightIt.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-It;
+src: url('../fonts/OTF/SourceSansPro-It.otf')
+    ,url('../fonts/OTF/SourceSansPro-It.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-Light;
+src: url('../fonts/OTF/SourceSansPro-Light.otf')
+    ,url('../fonts/OTF/SourceSansPro-Light.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-LightIt;
+src: url('../fonts/OTF/SourceSansPro-LightIt.otf')
+    ,url('../fonts/OTF/SourceSansPro-LightIt.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-Regular;
+src: url('../fonts/OTF/SourceSansPro-Regular.otf')
+    ,url('../fonts/OTF/SourceSansPro-Regular.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-Semibold;
+src: url('../fonts/OTF/SourceSansPro-Semibold.otf')
+    ,url('../fonts/OTF/SourceSansPro-Semibold.otf'); /* IE9 */
+}
+
+@font-face
+{
+font-family: SourceSansPro-SemiboldIt;
+src: url('../fonts/OTF/SourceSansPro-SemiboldIt.otf')
+    ,url('../fonts/OTF/SourceSansPro-SemiboldIt.otf'); /* IE9 */
+}

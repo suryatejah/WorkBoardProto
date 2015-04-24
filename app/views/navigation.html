@@ -1,15 +1,12 @@
-<nav class="navbar navbar-default" ng-app="navigation">
-	<!-- <div class="container-fluid" id="navigation-AOE"> -->
+<nav class="navbar navbar-default" >
+	<div class="container-fluid" id="navigation-AOE">
 		<!--navbar header -->
-		<!-- <div class="navbar-header ">
-			<div class="row "> -->
+		<div class="navbar-header ">
+			<div class="row ">
 				<!-- Adtran and AOE logos -->
-				<div class="col-md-1 nav-header">
+				<div class="col-md-5 nav-header">
 					<img src="images/logos/AdtranLogo.png" class="adtranLogo">
-					
-				</div>
-				<div class="col-md-4 nav-header">
-				<img src="images/logos/AOELogo.png" class=" aoeLogo">
+					<img src="images/logos/AOELogo.png" class=" aoeLogo">
 				</div>
 				<!-- Search Box-->
 				<div  class="col-md-4 navbar-form" role="search">
@@ -19,9 +16,8 @@
 				</div>
 				<!-- alarm notifications Icon -->
 				<div  class="col-md-1  nav-header nav-border ">
-					<img ng-click="open('lg')" src="images/icons/Alarms.png" class="alarmNotifications">
+					<img ng-click="open('sm')" src="images/icons/Alarms.png" class="alarmNotifications">
 					<span class="badge notification-position">4</span>
-					
 				</div>
 				<!-- AOE user details -->
 				<div class="col-md-2   nav-header  aoe-user">
@@ -70,8 +66,8 @@
 					<img ng-click="libraryVisible=!libraryVisible" src="images/icons/AppLibraryIcon.png" class="alarmNotifications">
 					<app-library  class="applibrary" ng-show="libraryVisible" ></app-library>
 				</div>
-			<!-- </div>
-		</div> -->
+			</div>
+		</div>
 
-	<!-- </div> -->
+	</div>
 </nav>

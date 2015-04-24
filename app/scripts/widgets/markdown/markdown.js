@@ -24,16 +24,16 @@
 
 'use strict';
 
-angular.module('dashBoardSampleApp.widgets.markdown', ['adf.provider', 'btford.markdown'])
+angular.module('dashBoardSampleApp')
   .config(function(dashboardProvider){
     dashboardProvider
       .widget('markdown', {
         title: 'Markdown',
         description: 'Markdown widget',
         controller: 'markdownCtrl',
-        templateUrl: 'scripts/widgets/markdown/markdown.html',
+        templateUrl: 'scripts/widgets/templates/markdown.html',
         edit: {
-          templateUrl: 'scripts/widgets/markdown/edit.html',
+          templateUrl: 'scripts/widgets/templates/edit.html',
           reload: false
         }
       });

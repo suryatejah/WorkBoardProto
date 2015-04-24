@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Agency FB';
-  src: url('/images/global/AGENCYR.TTF');
+  src: url('../fonts/AGENCYR.TTF');
 }
 
 .tab-content {
@@ -416,3 +416,58 @@ body {
   z-index: 1000;
 }
 
+.drag{
+	background-color:#8CC36E;
+	color: #fff !important;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.edit .column {
+  min-height: 120px;
+  border: 1px #ccc dashed;
+  padding-top: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+pre.edit {
+  margin-top: 15px;
+}
+
+.column .placeholder {
+  background: #E8E8E8;
+  border: 1px dashed #505050;
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.widget h3 a {
+  text-decoration: none;
+  overflow: scroll;
+}
+
+.dashboard-container h1 a {
+  text-decoration: none;
+}
+
+.padding-bottom {
+  padding-bottom: 5px;
+}
+
+.adf-flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+.grid{
+	overflow: auto;
+}

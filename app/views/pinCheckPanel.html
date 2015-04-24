@@ -1,0 +1,19 @@
+<div class="pin-checked-items-panel pin-checked-items-panel-toggle"
+	id="pinCheckedItemsPanel" ng-controller="ControlPanelCtrl as ctrl">
+	<div class="control-panel-heading">Pinned Items</div>
+	<div class="pin-checked-wraper" id="">
+		<div class='pin-Checkbox'>
+			<ul class="pin-sidebar-nav">
+				<li ng-repeat='(key,value) in ctrl.pinCheckList'><a href='#'>
+						<input id='unpinCheckbox' class='list-Checkbox' type='checkbox'
+						ng-click="ctrl.Select(key)">{{value.name}}
+				</a> <span class="checkbox-status"><i class="glyphicon glyphicon-record status-icon"></i> Status</span>
+					<div style='clear: both''></div></li>
+			</ul>
+
+		</div>
+	</div>
+				<button class="btn unPin-checked-items" ng-click='ctrl.unPinItem()'>
+				<i class="glyphicon glyphicon-pushpin"> </i> Unpin Checked Items
+			</button>
+</div>
