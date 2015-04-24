@@ -35,13 +35,13 @@
 								styleClass : 'col-md-6',
 								widgets : [{
 									type : 'chart',
-									title : 'Recently Scheduled Tasks'
+									title : 'Alarms Chart'
 								}]
 							}, {
 								styleClass : 'col-md-12',
 								widgets : [{
 									type : 'grid',
-									title : 'Alarms'
+									title : 'Alarms List'
 								}, {
 									type : 'markdown',
 									config : {
@@ -82,28 +82,30 @@
 					});
 				};
 				var addNewWorkboard = function() {
-					var id = $scope.workboards.length + 1;
-					$scope.model = {};
-					$scope.name = 'Workboard'+id+'_dashboard';
-					$scope.workboards.push({
-						id : id,
-						title : 'Workboard-' + id,
-						active : true,
-						model : {
-							title : '',
-							structure : '6-6',
-							rows : [{
-								columns : [{
-									styleClass : 'col-md-6',
-									widgets : []
+					if ($scope.workboards.length <8) {
+						var id = $scope.workboards.length + 1;
+						$scope.model = {};
+						$scope.name = 'Workboard' + id + '_dashboard';
+						$scope.workboards.push({
+							id : id,
+							title : 'Workboard-' + id,
+							active : true,
+							model : {
+								title : '',
+								structure : '6-6',
+								rows : [{
+									columns : [{
+										styleClass : 'col-md-5',
+										widgets : []
+									}]
 								}]
-							}]
-						},
-						collapsible : true,
-						editMode : true,
-						name : name
-					});
-				};			
+							},
+							collapsible : true,
+							editMode : true,
+							name : name
+						});
+					}
+				};
 				$scope.addWorkspace = function() {
 					setAllInactive();
 					addNewWorkboard();

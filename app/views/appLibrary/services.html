@@ -1,8 +1,8 @@
 <div class="services-app-list" >
 	<div class="applist-row" >
-		<div class="col-md-4" ng-repeat="app in servicesList">
-			<div class="row">
-				<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
+		<div class="col-md-4 services-app-hieght" ng-repeat="app in servicesList">
+			<div ng-dblclick="OnAppClick()"  ng-disabled="app.disabled" class="row" draggable app-name="{{app.name}}">
+				<div class="col-md-4"><img ng-src="images/icons/{{app.icon}}" class="app-icon"/>
 				</div>
 				<div class="col-md-8">
 					<p>
@@ -11,7 +11,7 @@
 					<p>
 						{{app.status}}
 					</p>
-					<i class="add-app-icon glyphicon glyphicon-plus-sign"></i>
+					<i class="add-app-icon glyphicon glyphicon-plus-sign" ></i>
 				</div>
 			</div>
 			<span class="badge app-notification-badge" ng-show="app.updateAvailable">!</span>

@@ -427,7 +427,7 @@ body {
 
 .edit .column {
   min-height: 120px;
-  border: 1px #ccc dashed;
+  border: none;
   padding-top: 15px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -440,7 +440,7 @@ pre.edit {
 
 .column .placeholder {
   background: #E8E8E8;
-  border: 1px dashed #505050;
+  border: none;
   margin-bottom: 15px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

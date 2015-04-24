@@ -1,7 +1,7 @@
 <div class="network-design-app-list"  >
 	<div class="applist-row" >
 		<div class="col-md-4" ng-repeat="app in networkDesignList">
-			<div class="row">
+			<div ng-dblclick="OnAppClick()" ng-disabled="app.disabled" class="row" draggable app-name="{{app.name}}">
 				<div class="col-md-4"><img src="images/icons/AppIcon.png" class="app-icon"/>
 				</div>
 				<div class="col-md-8">

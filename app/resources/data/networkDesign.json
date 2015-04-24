@@ -1,0 +1,27 @@
+[
+	{
+		"name": "ALARM",
+		"status": "DOWNLOADED",
+		"updateAvailable": false
+	}, {
+		"name": "PM APP",
+		"status": "DOWNLOADED",
+		"updateAvailable": true
+	}, {
+		"name": "PM APP",
+		"status": "DOWNLOADED",
+		"updateAvailable": false
+	}, {
+		"name": "ALARM",
+		"status": "DOWNLOADED",
+		"updateAvailable": false
+	}, {
+		"name": "PM APP",
+		"status": "DOWNLOADED",
+		"updateAvailable": true
+	}, {
+		"name": "PM APP",
+		"status": "DOWNLOADED",
+		"updateAvailable": false
+	}
+]

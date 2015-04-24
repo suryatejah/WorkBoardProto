@@ -1,6 +1,6 @@
 'use-strict';
 
-angular.module('dashBoardSampleApp.controllers.ServerGateways',[])
+angular.module('dashBoardSampleApp')
 	.factory("serverGateway",['$http','$q',
 	function($http,$q){
 		var fac = {};

@@ -1,0 +1,241 @@
+.applibrary {
+	position: absolute;
+	top: 100%;
+	right: 0px;
+	background-color: #fff;
+	z-index: 1000;
+	float: left;
+	min-width: 400px;
+	margin: 1px 0 0;
+	font-size: 14px;
+	text-align: left;
+	border: 1px solid #ccc;
+	border-top-style: none;
+	border-radius: 0px;
+}
+.applibrary-header {
+	background-color: #E4E6E9;
+	height: 30%;
+	width: 100%;
+	padding: 5px;
+}
+
+.applibrary-header > p {
+	font-size: 14px;
+	color: #fff;
+	width: 100%;
+	padding: 5px;
+	background-color: #777783;
+}
+
+.icon-filter {
+	cursor: pointer;
+	padding: 5px;
+	transform: rotate(90deg);
+}
+
+.icon-filter:hover {
+	color: #8cc63e;
+	background-color: #fff;
+}
+
+.applibrary-header input[type=search] {
+	border-radius: 0px;
+	height: 25px;
+	/*width: 105%;*/
+}
+
+.call-out {
+	height: 80%;
+}
+
+.call-out .tab-content {
+	min-height: 300px;
+}
+
+.call-out .row {
+	padding: 5px;
+	text-align: center;
+}
+
+.call-out .nav-tabs > li.active > a, .call-out .nav-tabs > li.active > a:focus, .call-out .nav-tabs > li.active > a:hover {
+	color: #777783;
+	cursor: default;
+	background-color: #fff;
+	border-bottom-color: transparent;
+}
+
+.call-out .nav > li > a:hover {
+	text-decoration: none;
+	background-color: #777783;
+}
+
+.asset-management-app-list, .services-app-list, .troubleshooting-app-list, .network-design-app-list {
+	min-height: 250px;
+	max-height: 300px;
+	background-color: #e4e6e9;
+	margin: 5px;
+	padding: 5px;
+}
+
+.modal-body {
+	padding: 0px;
+}
+
+.applibrary-search {
+	height: 30px;
+}
+
+.call-out .btn {
+	width: 90px;
+	border-radius: 8px;
+}
+
+.call-out .btn:focus {
+	outline: 0 none;
+	padding: 5px 0px;
+	color: #fff;
+}
+
+.call-out .btn:active:focus, .call-out .btn.active:focus {
+	color: #fff;
+	background-color: #8cc36e;
+}
+
+.call-out .btn:hover {
+	background-color: #8cc36e;
+	color: #fff;
+}
+
+.app-type-buttons {
+	margin: 5px;
+	padding: 5px;
+}
+
+.asset-management-app-list:after, .services-app-list:after, .troubleshooting-app-list:after, .network-design-app-list:after {
+	position: absolute;
+	margin-top: -15px;
+	display: inline-block;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #e4e6e9;
+	border-left: 10px solid transparent;
+	content: '';
+}
+
+.asset-management-app-list:after {
+	left: 40px;
+}
+
+.services-app-list:after {
+	right: 150px;
+}
+
+.troubleshooting-app-list:after {
+	right: 55px;
+}
+
+.network-design-app-list:after {
+	left: 140px;
+}
+
+.app-icon {
+	height: 30px;
+	width: 30px;
+}
+
+.applist-row .row {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+}
+
+.applist-row > .col-md-4 {
+	background-color: #fff;
+	border: 1px solid #777783;
+	height: 60px;
+	margin: 8px;
+	padding: 0px;
+	width: 110px;
+}
+
+.applist-row > .col-md-4 > .row > .col-md-4:hover {
+	background-color: #8cc63e;
+}
+
+.applist-row > .col-md-4 > .row > .col-md-4 {
+	padding: 10px 0px 10px 0px;
+	background-color: #777783;
+	height: 100%;
+}
+
+.applist-row > .col-md-4 > .row > .col-md-8 {
+	padding: 0px;
+}
+
+.applist-row > .col-md-4 > .row > .col-md-8 > p {
+	margin: 0px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.applist-row > .col-md-4 > .row > .col-md-8 > p:first-of-type {
+	font-weight: bold;
+	color: #777783;
+}
+
+.applist-row > .col-md-4 > .row > .col-md-8 > p:last-of-type {
+	color: #777783;
+	font-size: 11px;
+}
+
+.add-app-icon {
+	float: right;
+	margin-bottom: 0px;
+	padding: 5px 5px 5px 0px;
+	color: #777783;
+}
+
+.add-app-icon:hover {
+	color: #8cc63e;
+}
+
+.app-notification-badge {
+	background-color: #ff0000;
+	font-family: "Arial Black";
+	right: -8px;
+	top: -8px;
+	z-index: 1;
+	position: absolute;
+	font-size: 14px;
+}
+.panel-body {
+	padding: 0px;
+}
+.services-app-hieght {
+	height: 72px !important;
+}
+.services-app-hieght > .row > .col-md-4 {
+	padding: 17px 0px 0px 0px !important;
+}
+.services-app-hieght .add-app-icon {
+	position:absolute;
+	top: 53px;
+	right: 2px;
+	padding: 0px !important;
+}
+.applist-row .row[disabled] {
+	pointer-events: none;
+	cursor: not-allowed;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border:none;
+	opacity: .65;
+}
+.col-md-4[disabled] {
+	pointer-events: none;
+	cursor: not-allowed;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border:none;
+	opacity: .65;
+}

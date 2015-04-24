@@ -1,0 +1,27 @@
+[
+	{
+		"name": "SERVICE MONITOR",
+		"status": "DOWNLOADED",
+		"updateAvailable": false,
+		"disabled":true,
+		"icon":"AppIcon.png"
+	}, {
+		"name": "CAPACITY MANAGER",
+		"status": "DOWNLOADED",
+		"updateAvailable":false,
+		"disabled":true,
+		"icon":"AppIcon.png"
+	}, {
+		"name": "ALARMS CHART",
+		"status": "DOWNLOADED",
+		"updateAvailable": false,
+		"disabled":false,
+		"icon":"AppIcon.png"
+	}, {
+		"name": "ALARMS LIST",
+		"status": "DOWNLOADED",
+		"updateAvailable": false,
+		"disabled":false,
+		"icon":"Devices-01.png"
+	}
+]

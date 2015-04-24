@@ -71,7 +71,7 @@
 						$scope.isServicesOpen = false;
 						$scope.isTroubleshootingOpen = false;
 						break;
-					case "Services":
+					case "Service Assurance":
 						$scope.isAssetOpen = false;
 						$scope.isNetworkDesignOpen = false;
 						$scope.isServicesOpen = true;
@@ -86,44 +86,7 @@
 					};
 
 				};
-			},
-			controllerAs : 'appLibraryCtrl'
-		};
-
-	});
-	app.directive('assetManagement', function() {
-		return {
-			restrict : 'E',
-			templateUrl : 'views/appLibrary/assetManagement.html',
-			controller : function($scope, $controller) {
-				$scope.assetList = [{
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}];
-
-				$scope.OnAppClick = function() {
-					//debugger;
+				$scope.addAppToWorkboard = function(appName) {
 					var workboards = $scope.$root.workboards;
 					var workboardActive;
 					for (var i in workboards ) {
@@ -131,17 +94,58 @@
 							workboardActive = workboards[i];
 						}
 					}
-					var widgets = workboardActive.model.rows[0].columns[0].widgets;
-					var alarm = {
-						type : 'grid',
-						title : 'Alarms'
-					};
-					var appName = this.app.name;
-					if (appName === "ALARM") {
-						widgets.push(alarm);
+					if (workboardActive.model.rows[0].columns.length == 1) {
+						workboardActive.model.rows[0].columns.push({
+							styleClass : 'col-md-12',
+							widgets : []
+						});
 					}
+					var widgets = workboardActive.model.rows[0].columns[1].widgets;
+					var model = workboardActive.model;
+
+					var alarm = {
+						type : 'chart',
+						title : 'Alarms Chart'
+					};
+					var grid = {
+						type : 'grid',
+						title : 'Alarms List'
+					};
+
+					switch(appName) {
+					case "ALARMS CHART":
+						widgets.push(alarm);
+						break;
+					case "ALARMS LIST":
+						widgets.push(grid);
+						break;
+					};
 
 				};
+			},
+			controllerAs : 'appLibraryCtrl'
+		};
+
+	});
+	app.directive('assetManagement', function() {
+
+		return {
+			restrict : 'E',
+			templateUrl : 'views/appLibrary/assetManagement.html',
+			controller : function($scope, appsInfo) {
+				appsInfo.getAppList('resources/data/assetManagement.json').then(function(data) {
+					$scope.assetList = data;
+				});
+
+				$scope.OnAppClick = function() {
+					//debugger;
+					var appName = this.app.name;
+					$scope.addAppToWorkboard(appName);
+				};
+			},
+			link : function(scope, element, attrs) {
+				//debugger;
+
 			},
 			controllerAs : 'assetCtrl'
 		};
@@ -151,32 +155,15 @@
 		return {
 			restrict : 'E',
 			templateUrl : 'views/appLibrary/networkDesign.html',
-			controller : function($scope) {
-				$scope.networkDesignList = [{
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}];
+			controller : function($scope, appsInfo) {
+				appsInfo.getAppList('resources/data/networkDesign.json').then(function(data) {
+					$scope.networkDesignList = data;
+				});
+				$scope.OnAppClick = function() {
+					//debugger;
+					var appName = this.app.name;
+					$scope.addAppToWorkboard(appName);
+				};
 			},
 			controllerAs : 'networkDesignCtrl'
 		};
@@ -185,32 +172,15 @@
 		return {
 			restrict : 'E',
 			templateUrl : 'views/appLibrary/services.html',
-			controller : function($scope) {
-				$scope.servicesList = [{
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}];
+			controller : function($scope, appsInfo) {
+				appsInfo.getAppList('resources/data/services.json').then(function(data) {
+					$scope.servicesList = data;
+				});
+				$scope.OnAppClick = function() {
+					//debugger;
+					var appName = this.app.name;
+					$scope.addAppToWorkboard(appName);
+				};
 			},
 			controllerAs : 'servicesCtrl'
 		};
@@ -223,32 +193,15 @@
 		return {
 			restrict : 'E',
 			templateUrl : 'views/appLibrary/troubleshooting.html',
-			controller : function($scope) {
-				$scope.troubleshootingList = [{
-					name : 'DEMO',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'ALARM',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : false
-				}, {
-					name : 'PM APP',
-					status : 'DOWNLOADED',
-					updateAvailable : true
-				}];
+			controller : function($scope, appsInfo) {
+				appsInfo.getAppList('resources/data/troubleshooting.json').then(function(data) {
+					$scope.troubleshootingList = data;
+				});
+				$scope.OnAppClick = function() {
+					//debugger;
+					var appName = this.app.name;
+					$scope.addAppToWorkboard(appName);
+				};
 			},
 			controllerAs : 'troubleshootingCtrl'
 		};
@@ -263,20 +216,20 @@
 		return {
 			restrict : 'A',
 			controller : function($scope) {
-				$scope.dragStart = function(e,a,b) {
-					// debugger;
-					e.dataTransfer.effectAllowed = 'move';
-					e.dataTransfer.clearData('Text');
-					e.dataTransfer.setData('Text', this.id);
-					this.classList.add('drag');
-					return false;
-				};
+
 			},
 			link : function(scope, element, attrs, controller) {
-				// debugger;
 				var el = element[0];
 				el.draggable = true;
-				el.addEventListener('dragstart',scope.dragStart, false);
+				el.addEventListener('dragstart', function(e) {
+					//debugger;
+					var appName = this.attributes["app-name"].value;
+					e.dataTransfer.effectAllowed = 'move';
+					e.dataTransfer.clearData('AppName');
+					e.dataTransfer.setData('AppName', appName);
+					this.classList.add('drag');
+					return false;
+				}, false);
 				el.addEventListener('dragend', function(e) {
 
 					this.classList.remove('drag');
@@ -293,19 +246,23 @@
 	app.directive('droppable', function() {
 		return {
 			restrict : 'A',
-			link : function(scope, element, attrs, controller) {
+			link : function($scope, element, attrs, controller) {
 				var el = element[0];
 				el.addEventListener('dragover', function(e) {
-					e.dataTransfer.dropEffect = 'move';
 					// allows us to drop
-					if (e.preventDefault)
+					if (e.preventDefault) {
 						e.preventDefault();
+					}
+					e.dataTransfer.dropEffect = 'move';
 					return false;
 				}, false);
 				el.addEventListener('drop', function(e) {
-					// debugger;
-					if (e.stopPropagation)
-						e.stopPropagation();
+					//debugger;
+					
+					console.time("DragAndDrop");
+					$scope.addAppToWorkboard(e.dataTransfer.getData('AppName'));
+					console.timeEnd("DragAndDrop");
+
 					return false;
 				}, false);
 

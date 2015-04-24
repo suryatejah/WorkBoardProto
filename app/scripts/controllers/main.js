@@ -3,7 +3,9 @@
 /**
  * @ngdoc function
  * @name dashBoardSampleApp.controller:MainCtrl
- * @description # MainCtrl Controller of the dashBoardSampleApp
+ * @description
+ * # MainCtrl
+ * Controller of the dashBoardSampleApp
  */
 (function() {
 	var app = angular.module('dashBoardSampleApp');

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "INVENTORY MANAGER",
+        "status": "DOWNLOADED",
+        "updateAvailable": false,
+        "disabled":true
+    },
+    {
+        "name": "DISCOVERY",
+        "status": "DOWNLOADED",
+        "updateAvailable":false,
+        "disabled":true
+    },
+    {
+        "name": "SW UPGRADE",
+        "status": "DOWNLOADED",
+        "updateAvailable": false,
+        "disabled":true
+    },
+    {
+        "name": "SW AUTO-UPGRADE",
+        "status": "DOWNLOADED",
+        "updateAvailable": false,
+        "disabled":true
+    },
+    {
+        "name": "SCHEDULAR",
+        "status": "DOWNLOADED",
+        "updateAvailable": false,
+        "disabled":true
+    }
+]
